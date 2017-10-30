@@ -23,4 +23,14 @@ function parseErrors(nodeRestfulErrors) {
   return errors
 }
 
+WordCycle.route('count', function(req, res, next) {
+  WordCycle.count(function(error, value) {
+    if(error) {
+      res.status(500).json({errors: [error]})
+    } else {
+      res.json({value})
+    }
+  })
+})
+
 module.exports = WordCycle

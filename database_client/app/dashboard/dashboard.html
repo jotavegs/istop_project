@@ -1,4 +1,6 @@
-<!-- <section class="content" ng-controller="DashboardCtrl as dashboard">
+<content-header name="Dashboard" small="Versão {{ consts.version }}"></content-header>
+
+<section class="content" ng-controller="DashboardCtrl as dashboard">
   <div class="row">
     <value-box grid="4" color-class="bg-green" icon-class="fa fa-bank"
       value="R$ {{ dashboard.credit | number: 2  }}" text="Total de Créditos"></value-box>
@@ -7,77 +9,4 @@
     <value-box grid="4" color-class="bg-blue" icon-class="fa fa-money"
       value="R$ {{ dashboard.total | number: 2  }}" text="Valor Consolidado"></value-box>
   </div>
-</section> -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">IsTop</a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
-
-<div class="container">
-
-  <div class="starter-template">
-    <h1>Tela de cadastro/atualização de registros</h1>
-    <!-- <p class="lead">Selecione um registro da lista para modificá-lo.<br> Ou crie um novo preenchendo os 2 campos de baixo.</p> -->
-  </div>
-<form>
-<div class="form-group">
-  <label for="sel1">Filtro:</label>
-  <select class="form-control" id="sel1">
-  <option>Jaburu</option>
-  <option>Jabuti</option>
-  <option>Jacaré</option>
-  <option>Jaguatirica</option>
-  <option>Javali</option>
-  <option>Jiboia</option>
-  <option>Jumento</option>
-  </select>
-  <br>
-  <label for="sel2">Seleção múltipla (Segurar ctrl para selecionar mais do que 1):</label>
-  <select multiple class="form-control" id="sel2">
-  <option>Jaburu</option>
-  <option>Jabuti</option>
-  <option>Jacaré</option>
-  <option>Jaguatirica</option>
-  <option>Javali</option>
-  <option>Jiboia</option>
-  <option>Jumento</option>
-  </select>
-
-
-</div>
-<div class="form-group">
-  <label for="palavra">Palavra:</label>
-  <input type="text" class="form-control" id="palavra">
-</div>
-<div class="form-group">
-  <label for="tipo">Tipo:</label>
-  <input type="text" class="form-control" id="tipo">
-</div>
-<p>
-  <button type="button" class="btn btn-success">Salvar modificação</button>
-  <button type="button" class="btn btn-primary">Criar novo registro</button>
-  <button type="button" class="btn btn-danger">Deletar Registro</button>
-</p>		
-</form>
-
-</div><!-- /.container -->
-
-
-
-</div>
+</section>

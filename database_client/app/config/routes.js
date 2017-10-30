@@ -2,10 +2,10 @@ angular.module('primeiraApp').config([
   '$stateProvider',
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
-    $stateProvider.state('dashboard', {
-      url: "/dashboard",
-      templateUrl: "dashboard/dashboard.html"
+    $stateProvider.state('wordManager', {
+      url: "/word-manager?page",
+      templateUrl: "wordManager/tabs.html"
     })
 
-    $urlRouterProvider.otherwise('/dashboard')
+    $urlRouterProvider.otherwise('/word-manager')
 }])

@@ -1,0 +1,19 @@
+<div role="form">
+  <div class="box-body">
+    <field id="wordManagerType" label="Tipo" model="wordManager.type"
+         placeholder="Informe o Tipo" grid="12 6" readonly="tabDelete"></field>
+    <field id="wordManagerWord" label="Palavra" model="wordManager.word" type="string"
+         placeholder="Informe a Palavra" grid="12 6" readonly="tabDelete"></field>
+    <hr>
+
+
+  <div class="box-footer">
+    <button class="btn btn-primary" ng-click="createWord()"
+         ng-if="tabCreate">Incluir</button>
+    <button class="btn btn-info" ng-click="updateWord()"
+         ng-if="tabUpdate">Alterar</button>
+    <button class="btn btn-danger" ng-click="deleteWord()"
+         ng-if="tabDelete">Excluir</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
+  </div>
+</div>

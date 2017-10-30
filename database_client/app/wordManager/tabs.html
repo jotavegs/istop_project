@@ -1,7 +1,7 @@
-<content-header name="Ciclo de Pagamentos" small="Cadastro"></content-header>
+<content-header name="Palavras cadastradas"></content-header>
 
 <section class="content">
-    <div class="nav-tabs-custom" ng-controller="BillingCycleCtrl">
+    <div class="nav-tabs-custom" ng-controller="WordManagerCtrl">
       <ul class="nav nav-tabs">
         <li ng-if="tabList" ng-class="{active: tabList}">
            <a href data-target="#tabList" data-toggle="tab">
@@ -29,21 +29,21 @@
             id="tabList"
             ng-if="tabList"
             ng-class="{active: tabList}"
-            ng-include="'billingCycle/list.html'"></div>
+            ng-include="'wordManager/list.html'"></div>
         <div class="tab-pane"
             id="tabCreate"
             ng-if="tabCreate"
-            ng-include="'billingCycle/form.html'"></div>
+            ng-include="'wordManager/form.html'"></div>
         <div class="tab-pane"
             id="tabUpdate"
             ng-if="tabUpdate"
             ng-class="{active: tabUpdate}"
-            ng-include="'billingCycle/form.html'"></div>
+            ng-include="'wordManager/form.html'"></div>
         <div class="tab-pane"
             id="tabDelete"
             ng-if="tabDelete"
             ng-class="{active: tabDelete}"
-            ng-include="'billingCycle/form.html'"></div>
+            ng-include="'wordManager/form.html'"></div>
       </div>
     </div>
 </section>

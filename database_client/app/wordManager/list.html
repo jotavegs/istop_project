@@ -1,0 +1,32 @@
+<div class="box-body">
+  <div>
+      <field id="wordManagerFilterType" ng-if="tabList" label="Filtro por Tipo" model="filter.type"
+      placeholder="Informe o Tipo" grid="12 4"></field>
+      <field id="wordManagerFilterWord" ng-if="tabList" label="Filtro por Palavra" model="filter.word"
+      placeholder="Informe o Palavra" grid="12 4"></field>
+      <button class="btn btn-primary" ng-click="getWords()" style="margin-top: 25px;"
+      ng-if="tabList">Aplicar Filtro</button>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Palavra</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="wordManager in wordManagers">
+        <td>{{:: wordManager.type }}</td>
+        <td>{{:: wordManager.word }}</td>
+        <td style="width:100px;">
+          <button class="btn btn-warning" ng-click="showTabUpdate(wordManager)"><i class="fa fa-pencil"></i></button>
+          <button class="btn btn-danger" ng-click="showTabDelete(wordManager)"><i class="fa fa-trash-o"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="box-footer clearfix">
+   <paginator url="/#!/word-manager" pages="{{ pages }}"></paginator>
+</div>
