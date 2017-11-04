@@ -3,22 +3,23 @@ const bodyParser = require('body-parser')
 const queryParser = require('express-query-int')
 
 const express = require('express')
-const server = express()
+const app = express()
+var server = require('http').createServer(app)
 const cors = require('cors')
 const http = require('http')
 
-const io = require('socket.io')
+const io = require('socket.io')(server)
 const socketConfig = require('./socketConfig')
 
-server.use(bodyParser.urlencoded({ extended: true }))
-server.use(bodyParser.json())
-server.use(cors)
-server.use(queryParser())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(cors)
+app.use(queryParser())
 
 //io config
-var _http = http.Server(server);
-var _io = new io(_http, { origins: '*:*'});
-socketConfig(_io)
+// var _http = http.Server(app);
+// var _io = new io(_http, { origins: '*:*'});
+socketConfig(io)
 
 server.listen(port, function() {
   console.log(`BACKEND is running on port ${port}.`)

@@ -4,7 +4,7 @@
   "description": "",
   "main": "loader.js",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon --debug=8101",
     "production": "pm2 start loader.js --name backend"
   },
   "author": "Leonardo Leitão",
