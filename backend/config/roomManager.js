@@ -1,20 +1,12 @@
-module.exports = function(app, rooms) {
+module.exports = function(app) {
 
-    app.get('/getAllRooms', function(req, res) {
-        res.json(rooms);
-    })
-    app.post('/createRoom', function(req, res, next) {
-        if(roomValidator(req.params)){
-            rooms.push(req.params);
-        }        
-        next();
+    app.get('/createRoom', function(req, res, next) {
+        app.rooms.push({teste: 'teste'})  
+        res.send('sala inserida!')
     })
     app.put('/enterRoom', function(req, res) {
         res.json();
     })
     var roomValidator = function(room){
-        if (isInArray(days, "Sunday")){
-
-        }
     }
 }
