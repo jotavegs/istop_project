@@ -1,4 +1,5 @@
-const serverExpress = require('./config/server')
-
+const server = require('./config/server')
+var rooms = [];
 require('./config/database')
-require('./config/routes')(serverExpress)
+require('./config/routes')(server)
+require('./config/roomManager')(server, rooms)
