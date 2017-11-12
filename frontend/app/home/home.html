@@ -11,7 +11,7 @@
   </div> -->
   <ul id="messages"></ul>
   <form action="">
-    <input id="m" autocomplete="off" /><button ng-click="home.connect()">Send</button>
+    <input id="m" autocomplete="off" /><button ng-click="home.connect();home.loadRooms();">Send</button>
     <div ng-repeat="room in home.rooms">
       room.teste
     </div>

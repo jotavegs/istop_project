@@ -19,5 +19,5 @@ function HomeController($http, consts) {
     })
   }
 
-  socket.emit('loadRooms'); 
+  // socket.emit('loadRooms'); 
 }
