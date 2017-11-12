@@ -24,11 +24,16 @@
     "gulp-babel": "7.0.0",
     "gulp-concat": "2.6.1",
     "gulp-htmlmin": "3.0.0",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "3.0.0",
     "gulp-uglifycss": "1.0.8",
     "gulp-util": "3.0.8",
     "gulp-watch": "4.3.11",
     "gulp-webserver": "0.9.1",
     "run-sequence": "2.2.0"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.0.4"
   }
 }

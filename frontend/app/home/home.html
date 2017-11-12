@@ -1,0 +1,16 @@
+<content-header name="Home" small="Versão {{ consts.version }}"></content-header>
+
+<section class="content" ng-controller="HomeCtrl as home">
+  <div class="row">
+    <value-box grid="4" color-class="bg-green" icon-class="fa fa-bank"
+      value="R$ {{ home.credit | number: 2  }}" text="Total de Créditos"></value-box>
+    <value-box grid="4" color-class="bg-red" icon-class="fa fa-credit-card"
+      value="R$ {{ home.debt | number: 2  }}" text="Total de Débitos"></value-box>
+    <value-box grid="4" color-class="bg-blue" icon-class="fa fa-money"
+      value="R$ {{ home.total | number: 2  }}" text="Valor Consolidado"></value-box>
+  </div>
+  <ul id="messages"></ul>
+  <form action="">
+    <input id="m" autocomplete="off" /><button ng-click="home.connect()">Send</button>
+  </form>
+</section>

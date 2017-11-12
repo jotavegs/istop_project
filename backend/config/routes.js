@@ -1,10 +1,10 @@
 const express = require('express')
 
-module.exports = function(server) {
+module.exports = function(app) {
 
   // API Routes
   const router = express.Router()
-  server.use('/api', router)
+  app.use('/api', router)
 
   // rotas da API
   const WordService = require('../api/stop/wordService')

@@ -4,6 +4,7 @@ const uglify = require('gulp-uglify')
 const uglifycss = require('gulp-uglifycss')
 const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
+const sourcemaps = require('gulp-sourcemaps')
 
 gulp.task('app', ['app.html', 'app.css', 'app.js', 'app.assets'])
 
@@ -23,8 +24,10 @@ gulp.task('app.css', () => {
 gulp.task('app.js', () => {
   return gulp.src('app/**/*.js')
     .pipe(babel({ presets: ['env'] }))
+    .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(concat('app.min.js'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/assets/js'))
 })
 
