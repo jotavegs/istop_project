@@ -5,12 +5,12 @@ const roomSchema = new mongoose.Schema({
   roomName: { type: String, required: true },
   creatorName: { type: String, required: true },
   playersQty: { type: Number, required: true },
-  players: { type: Array, required: true },
+  players: { type: [Number], required: true },
   timeout: { type: Number, required: true },
   interval: { type: Number, required: true },
   rounds: { type: Number, required: true },
-  categories: { type: Array, required: true },
-  words: { type: Array, required: true },
+  categories: { type: [String], required: true },
+  letters: { type: [String], required: true },
   difficulty: { type: String, required: true }
 })
 

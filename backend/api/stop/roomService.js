@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const Roomycle = require('./room')
+const RoomCycle = require('./room')
 
 RoomCycle.methods(['get', 'post', 'put', 'delete'])
 RoomCycle.updateOptions({new: true, runValidators: true})
