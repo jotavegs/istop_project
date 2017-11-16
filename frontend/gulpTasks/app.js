@@ -24,8 +24,8 @@ gulp.task('app.css', () => {
 gulp.task('app.js', () => {
   return gulp.src('app/**/*.js')
     .pipe(babel({ presets: ['env'] }))
-    .pipe(sourcemaps.init())
-    .pipe(uglify())
+    //.pipe(sourcemaps.init())
+    //.pipe(uglify())
     .pipe(concat('app.min.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/assets/js'))

@@ -4,7 +4,7 @@ module.exports = function(io, app){
         socket.on('loadRooms', function(data) {
             console.log('request recebido')
             console.log(app.rooms)
-            io.emit('loadRooms', app.rooms);
+            socket.emit('loadRooms', app.rooms);
         })
     });
 }
