@@ -7,6 +7,7 @@ angular.module('primeiraApp').controller('HomeCtrl', [
 function HomeController($http, consts) {
   const vm = this
   vm.rooms = []
+  // vm.rooms.rounds = []
   const socket = io('http://localhost:3003');
 
   vm.connect = (message) => {  
@@ -19,5 +20,4 @@ function HomeController($http, consts) {
     })
   }
 
-  // socket.emit('loadRooms'); 
 }

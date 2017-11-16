@@ -1,24 +1,23 @@
-var Schema = require('node-schema-object')
-// const roundSchema = require('./round')
+const restful = require('node-restful')
+const mongoose = restful.mongoose
 
-const playerSchema = new Schema({
+const playerSchema = new mongoose.Schema({
   name: { type: String, required: true }
 })
 
-const categorySchema = new Schema({
+const categorySchema = new mongoose.Schema({
   name: { type: String, required: true }
 })
 
-const letterSchema = new Schema({
+const letterSchema = new mongoose.Schema({
   name: { type: String, required: true }
 })
 
-const roomSchema = new Schema({
+const roomSchema = new mongoose.Schema({
   roomName: { type: String, required: true },
   creatorName: { type: String, required: true },
   playersQty: { type: Number, required: true },
   players: [playerSchema],
-  // rounds: [roundSchema],
   timeout: { type: Number, required: true },
   interval: { type: Number, required: true },
   rounds: { type: Number, required: true },
@@ -28,5 +27,4 @@ const roomSchema = new Schema({
 })
 
 
-module.exports = roomSchema
-
+module.exports = restful.model('Room', roomSchema)

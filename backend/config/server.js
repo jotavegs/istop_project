@@ -11,12 +11,15 @@ const socketConfig = require('./socketConfig')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(queryParser())
+
 //initialization and definition of server
 const server = app.listen(port, function() {
   console.log(`BACKEND is running on port ${port}.`)
 })
+
 //rooms definition
 app.rooms = []
+
 //io config
 const io = require('socket.io')(server)
 socketConfig(io, app)

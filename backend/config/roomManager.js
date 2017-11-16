@@ -1,12 +1,28 @@
 module.exports = function(app) {
 
-    app.get('/createRoom', function(req, res, next) {
-        app.rooms.push({teste: 'teste'})  
-        res.send('sala inserida!')
+    app.post('/createRoom', function(req, res, next) {
+        console.log(req.body);
+        [validation, room] = roomValidator(req.body)
+        if (validation) {
+            app.rooms.push(room)
+            res.send('Sala Inserida!')
+        }
+        else {
+            res.send('Sala Inválida!')
+        }
     })
     app.put('/enterRoom', function(req, res) {
-        res.json();
+        //res.json();
     })
-    var roomValidator = function(room){
+    var roomValidator = function(json_string){
+        var Room = require('../api/stop/room')
+        var room = new Room(json_string)
+        if (room.isErrors()){
+            console.log(room.getErrors())
+            return [false, '']
+        }
+        else {
+            return [true, room]
+        }
     }
 }

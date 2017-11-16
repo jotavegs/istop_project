@@ -9,11 +9,13 @@
     <value-box grid="4" color-class="bg-blue" icon-class="fa fa-money"
       value="R$ {{ home.total | number: 2  }}" text="Valor Consolidado"></value-box>
   </div> -->
+  <div ng-repeat="room in home.rooms">
+      <div ng-repeat="atribute in room">
+          {{:: atribute }}
+      </div>
+    </div>
   <ul id="messages"></ul>
   <form action="">
     <input id="m" autocomplete="off" /><button ng-click="home.connect();home.loadRooms();">Send</button>
-    <div ng-repeat="room in home.rooms">
-      room.teste
-    </div>
   </form>
 </section>
