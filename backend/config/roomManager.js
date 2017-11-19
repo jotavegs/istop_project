@@ -1,17 +1,19 @@
-module.exports = function(app) {
+module.exports = function(scope) {
 
-    app.post('/createRoom', function(req, res, next) {
+    scope._app.post('/createRoom', function(req, res, next) {
         console.log(req.body);
         [validation, room] = roomValidator(req.body)
         if (validation) {
-            app.rooms.push(room)
+            scope.rooms.push(room)
             res.send('Sala Inserida!')
+            scope._socket.emit('loadRooms', scope.rooms)
+            
         }
         else {
             res.send('Sala Inválida!')
         }
     })
-    app.put('/enterRoom', function(req, res) {
+    scope._app.put('/enterRoom', function(req, res) {
         //res.json();
     })
     var roomValidator = function(json_string){
