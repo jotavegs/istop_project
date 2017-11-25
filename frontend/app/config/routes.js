@@ -7,10 +7,10 @@ angular.module('primeiraApp').config([
       templateUrl: "home/home.html"
     }).state('createRoom', {
       url: "/create-room",
-      templateUrl: "CreateRoom/tabs.html"
+      templateUrl: "createRoom/createRoom.html"
     }).state('room', {
       url: "/room?",
-      templateUrl: "room/tabs.html"
+      templateUrl: "room/room.html"
     })
 
     $urlRouterProvider.otherwise('/home')

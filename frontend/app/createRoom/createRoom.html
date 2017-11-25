@@ -1,0 +1,79 @@
+<div class="center" ng-controller="CreateRoomCtrl as CreateRoom">
+    <div class="page-header">
+      <h1>Nova Sala</h1>
+    </div>
+    
+    <form>
+      <div class="form-group col-lg-4">
+        <label>Apelido</label>
+        <input type="text" class="form-control" ng-model="CreateRoom.creator.name" placeholder="Ex: Destruidor">
+      </div>
+      <div class="form-group col-lg-4">
+        <label>Título da Sala</label>
+        <input type="text" class="form-control" ng-model="CreateRoom.roomName" placeholder="Ex: Stop da Galera">
+      </div>
+      <div class="form-group col-lg-4">
+        <label>Quantidade máxima de Jogadores</label>
+        <input type="number" class="form-control" ng-model="CreateRoom.playersMaxQty" value="10">
+      </div>
+      <div class="form-group col-lg-4">
+        <label>Intervalo entre as rodadas</label>
+        <input type="number" class="form-control" ng-model="CreateRoom.timeout" value="15">
+      </div>
+      <div class="form-group col-lg-4">
+        <label>Escolha a dificuldade</label>
+        <select class="form-control" ng-model="CreateRoom.difficulty">
+          <option value="easy">Fácil</option>
+          <option value="medium">Médio</option>
+          <option value="hard">Difícil</option>
+        </select>
+      </div>
+      <div class="form-group col-lg-6">
+        <label>Escolha as categorias</label>
+        <select multiple class="form-control" id="categoria" ng-model="CreateRoom.categories">
+          <option>Animal</option>
+          <option>Carro</option>
+          <option>CEP</option>
+          <option>Cor</option>
+          <option>Famoso</option>
+          <option>Fruta</option>
+          <option>Planeta</option>
+        </select>
+      </div>
+      <div class="form-group col-lg-12">
+        <label>Escolha as letras</label><br>
+        <select multiple class="form-control" id="letra" ng-model="CreateRoom.letters">
+          <option value="a">A</option>
+          <option value="b">B</option>
+          <option value="c">C</option>
+          <option value="d">D</option>
+          <option value="e">E</option>
+          <option value="f">F</option>
+          <option value="g">G</option>
+          <option value="h">H</option>
+          <option value="i">I</option>
+          <option value="j">J</option>
+          <option value="k">K</option>
+          <option value="l">L</option>
+          <option value="m">M</option>
+          <option value="n">N</option>
+          <option value="o">O</option>
+          <option value="p">P</option>
+          <option value="q">Q</option>
+          <option value="r">R</option>
+          <option value="s">S</option>
+          <option value="t">T</option>
+          <option value="u">U</option>
+          <option value="v">V</option>
+          <option value="w">W</option>
+          <option value="x">X</option>
+          <option value="y">Y</option>
+          <option value="z">Z</option>
+        </select>
+      </div>
+      <div class="text-center col-lg-2">
+        <a class="title"><button type="button" class="btn btn-danger btn-lg btn-block" ng-click="CreateRoom.createRoom()"><i class="glyphicon glyphicon-ok"></i>Criar Sala</button></a>
+      </div>
+    </form>
+    
+  </div>
