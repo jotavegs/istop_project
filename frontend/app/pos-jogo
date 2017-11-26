@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Modelo</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+  <style>
+  body {
+    font-family: 'Caveat';font-size: 22px;
+    background-image: url("http://www.designbolts.com/wp-content/uploads/2013/02/Golf-Shirt-Grey-Seamless-Pattern-For-Website-Background.jpg");
+    background-repeat: repeat;
+}
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        font-family:"Helvetica Neue";
+        font-size:16px;
+        z-index: 2;
+    }
+    .sidenav {
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #2A3239;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .center {
+      margin-left: 25%;
+    }
+    .title{
+      color:white;
+    }
+    .text{
+      color:black;
+    }
+    .thumbnail{
+      color:#eee;
+      background-color:#333;
+    }
+    .thumbnail:hover {
+        color: #d9534f;
+        text-decoration: underline;
+    }
+    #esq{
+        width: 350px;
+        float:left;
+        background-color: #2A3239;
+        border:2px solid white;
+        border-radius: 20px; 
+        height: 350px; 
+
+     }
+
+     #dir{
+        width: 350px;
+        height: 350px;
+        float:left;
+        left:310px;
+        border:3px solid gray;
+        background-color: #2A3239;
+        border:2px solid white;
+        border-radius: 20px;  
+        position:relative;
+        left:20px;
+        
+     }
+
+
+     }
+  </style>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+</head>
+<body>
+  <div class="container">
+    <div class="sidenav col-lg-2">
+      <h1 class="title text-center"><a href="home.html"><img src="https://cdn.pixabay.com/photo/2016/07/07/08/14/stop-1502032_960_720.png" width="50" height="50"></a> IsTop</h1>
+      <!-- <div class="form-group col-lg-3">
+          <button type="button" class="btn btn-default dropdown-toggle text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Visitante <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Fazer Login</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Criar Conta</a></li>
+          </ul>
+        </div> -->
+      <div class="text-center">
+      <a href="criar-sala.html" class="title"><button type="button" class="btn btn-danger btn-lg btn-block"><i class="glyphicon glyphicon-plus"></i> Nova Sala</button></a>
+    </div>
+    <h3 class="text-center title"> Ranking Semanal</h3>
+    <div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 66%; font-size:large;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Vitão - 6666 pts</div>
+  </div>
+    <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 55%; font-size:large;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">Vini - 5555 pts</div>
+  </div>
+    <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 50%; font-size:large;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Rafa - 5000 pts</div>
+  </div>
+  <h2 class="text-center title"> Ranking Mensal</h2>
+      <div class="progress">
+      <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width: 99%; font-size:large;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">Nerdão - 9999 pts</div>
+    </div>
+    </div>
+    <div class="center">
+    <div class="page-header">
+    <h1>IsTop!</h1>
+    </div>
+      <font color="white">
+      <div id="esq">
+        <h3 style="text-align:center">Pontuação da rodada</h3>
+        <br />
+        <!--<% for(i=0; i < user.length; i++){ %>
+        <p><%= userjogo[i].name %> ... <%= userjogo[i].pontos %> pontos</p >
+        <% } %>-->
+        <p>Jogador 1 ... 100 pontos</p>
+        <p>Jogador 2 ... 90 pontos</p>
+      </div>
+
+      <div id="dir">
+        <h3 style="text-align: center">Ranking Geral</h3>
+        <br />
+        <p>Jogador 1 ... 100 pontos</p>
+        <p>Jogador 2 ... 90 pontos</p>
+      </div>
+      </font>
+
+      <div class="panel-footer footer">
+        <p>IsTop todos os direitos reservados<small> @ Copyright 2017</small></p>
+      </div>
+          
+    </div>
+  </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
